@@ -331,10 +331,33 @@ section{ position:relative; padding-block:clamp(70px,10vw,140px); }
   object-position: top center; /* Focuses on the top/center of your poster */
   display: block;
 }
+
 .card-layerbar{
   display:flex; align-items:center; justify-content:space-between;
   padding:12px 16px; border-bottom:1px solid var(--line);
   font-family:var(--f-mono); font-size:11px; color:var(--muted-2);
+}
+.art-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Matches the dark brown background of the Lay's package */
+  background-color: #52240a !important; 
+}
+
+
+.rotate-fill {
+  position: absolute;
+  transform: rotate(-90deg);
+  
+  /* Fits the ENTIRE image height inside the box without cutting anything off */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; 
 }
 /* 1. Allow the container to grow to the image's height */
 .card-media {
